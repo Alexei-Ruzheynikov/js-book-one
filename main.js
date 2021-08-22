@@ -7,7 +7,11 @@ function openAlert() {
 многострочного
 комментария */
 // window.alert("Привет, мир!");
-// window.alert("Привет, \nмир!");
+window.alert("Привет, \nмир!");
+window.alert("Привет, 'мир!");
+window.alert('Привет, "мир!');
+window.alert("Привет, \\мир!");
+window.alert("Привет, \tмир!");
 
 // if (window.confirm("Нажмите на Ок или Отмена")) {
 //   console.log("Вы нажали ок");
@@ -15,9 +19,9 @@ function openAlert() {
 //   console.log("Вы нажали омтена");
 // }
 
-var UName = window.prompt("Как Вас зовут", "Noname");
-if (UName == null) {
-  alert("Пока");
-} else {
-  console.log("Привет, " + UName);
-}
+// var UName = window.prompt("Как Вас зовут", "Noname");
+// if (UName == null) {
+//   alert("Пока");
+// } else {
+//   console.log("Привет, " + UName);
+// }
