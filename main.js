@@ -1,94 +1,58 @@
-// var a = 10;
-// var b = 5;
-// if (a > b) {
-//   document.write("a > b");
-// }
-// if (a > b) {
-//   document.write("a > b");
-// } else {
-//   document.write("b < a");
-// }
-// if (!(a == b)) {
-//   document.write("a != b");
-// } else {
-//   document.write("a = b");
-// }
+// var m;
+// m = [5, 3, 4, 1, 2];
+// var months;
+// months = [
+//   "",
+//   "Янв",
+//   "Фев",
+//   "Мар",
+//   "Апр",
+//   "Май",
+//   "Апр",
+//   "Май",
+//   "Июн",
+//   "Июл",
+//   "Авг",
+//   "Сен",
+//   "Окт",
+//   "Ноя",
+//   "Дек",
+// ];
+// num0 = m[0];
+// j = m[3];
+// m[0] = 7;
+// m[5] = 8;
+// m[7] = 11;
+// alert(m);
 
-// var x = 0;
-// var y = 1;
-// var z;
-// if (x != 0) {
-//   z = 10 / x;
-//   document.write("z= " + z);
-// } else if (y != 0) {
-//   z = 10 / y;
-//   document.write("z = " + z);
-// } else document.write("Ошибка! Деление на 0");
+// var m = [9, 11, 7, 4, 99, 3, 2, 33, 3];
+// min = m[0];
+// min_ind = 0;
+// document.write("Массив: <br>" + min + " ");
+// for (i = 1; i < m.length; i++) {
+//   if (m[i] < min) {
+//     min = m[i];
+//     min_ind = i;
+//   } // if
+//   document.write(m[i] + " ");
+// } // for
+// document.write("<br>Минимум: " + min);
+// document.write("<br>Индекс: " + min_ind);
 
-// switch (Переменная или выражение) {
-//     case Значение1:
-//         Оператор1;
-//         break;
-//     case Значение2:
-//         Оператор2;
-//         break;
-//     default:
-//         Оператор;
-// }
-
-// var command = window.prompt("Введите действие", "");
-// if (command == null) {
-//   document.write("Нажата кнопка Отмена");
-// } else {
-//   switch (parseInt(command)) {
-//     case 1:
-//       alert("Выбрано действие 1");
-//       break;
-//     case 2:
-//       alert("Выбрано действие 2");
-//       break;
-//     case 3:
-//       alert("Выбрано действие 3");
-//       break;
-//     case 4:
-//       alert("Выбрано действие 4");
-//       break;
-//   }
-// }
-
-// for (var i = 0; i < 10; i++) {
-//   document.write(i);
-// }
-
-// for (var i = 1; i <= 10; i++) {
-//   document.write(i);
-// }
-
-// var i = 1;
-// while (i < 11) {
-//   document.write(i + "<br>");
-//   i++;
-// }
-
-// i = 1;
-// do {
-//   document.write(i);
-//   i++;
-// } while (i < 10);
-
-// for (i = 1; i < 21; i++) {
-//   if (i % 2 == 0) continue;
-//   else document.write(i + " ");
-// }
-
-// for (i = 1; i < 11; i++) {
-//   if (i == 5) break;
-//   document.write(i + " ");
-// }
-
-var j = 1;
-while (j < 15) {
-  for (var k = 0; k < j; k++) document.write("*");
-  document.write("<br>");
-  j++;
+var m = [0, 0, 0];
+m[0] = [3, 2, 1];
+m[1] = [7, 8, 9];
+m[2] = [5, 6, 7];
+max = m[0][0];
+ind = [0, 0];
+for (i = 0; i < m.length; i++) {
+  for (j = 0; j < m[i].length; j++) {
+    if (m[i][j] > max) {
+      max = m[i][j];
+      ind[0] = i;
+      ind[1] = j;
+    }
+  }
 }
+document.write("Максимум " + max);
+document.write("<br>ind [" + ind[0] + "][" + ind[1] + "]");
