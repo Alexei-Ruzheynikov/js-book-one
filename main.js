@@ -1,169 +1,167 @@
-// способ определение класса - объявление класса
-// class Human {
-//   constructor(year, hname) {
-//     this.year = year;
-//     this.hname = hname;
-//   }
+// var myUniqueVariableName1 = Number.MAX_VALUE;
+// alert(myUniqueVariableName1);
+// var myUniqueVariableName2 = new Number(1000);
+// var str = myUniqueVariableName2.toString();
+// console.log(typeof str + " " + str);
+
+// var so = new String("Hello");
+// document.write(so.length);
+
+//Возвращает символ строки с указанным номером
+// var s = "Hello";
+// var x = s.charAt(4);
+// alert(x);
+
+//toLowerCase преобразует в нижний регистр
+// var myCarName = "Tatra";
+// s = myCarName.toLowerCase();
+// alert(s);
+
+//toUpperCase преобразует в верхний регистр
+// var myCarName = "Tatra";
+// s = myCarName.toUpperCase();
+// alert(s);
+
+//substr(начало фрагмента,длина) (Если второй параметр пропущен, будет возвращено все до конца строки)
+// var S = "Hello, dummy";
+// console.log(S.substr(0, 5));
+// console.log(S.substr(7, 3));
+
+// substring( начало фрагмента, конец фрагмента) (Последний символ в подстркоу не считается)
+// var S = "Hello, dummy";
+// console.log(S.substring(4, 9));
+
+// indexOf - возвращает номер позиции вхождения подстроки в текущей строке, lastIndexOf - возвращает номер позиции последнего вхождения подстроки в стркое
+// var S = "Hello, dummy";
+// console.log(S.indexOf("llo"));
+// console.log(S.lastIndexOf("l"));
+
+// split - разделяет строку на подстроку с помощью разделителя и возвращает массив
+// var s = "Hello, dummy";
+// var m = s.split(", ");
+// console.log(m[0]);
+// console.log(m[1]);
+// console.log(m);
+
+//пример использования length в массиве
+// var m = new Array(1, 2, 3);
+// document.write(m.length + "<br>");
+// for (var i = 0, c = m.length; i < c; i++) {
+//   document.write(m[i] + "<br>");
 // }
 
-//безымяный
-// var Human = class {
-//   constructor(year, hname) {
-//     this.year = year;
-//     this.hname = hname;
-//   }
-// };
-// console.log(Human.name);
+//push - добавляет элементы в конец массива, возвращает новую длину массива
+// var m = [1, 2, 3];
+// m.push(4, 5);
+// console.log(m + " " + m.length);
 
-//именованный
-// var Den = class Human2 {
-//   constructor(year, hname) {
-//     this.year = year;
-//     this.hname = hname;
-//   }
-// };
-// console.log(Den.name);
+//unshift - добавляет элементы в начало массива
+// var m = [1, 2, 3];
+// m.unshift(4, 5);
+// console.log(m);
 
-// class Human {
-//   constructor(year, hname) {
-//     this.year = year;
-//     this.hname = hname;
-//   }
-//   static displayName = "Человек";
+//concat - озвращае массив полученный в результате объединения текущего массива и списка элементов
+// var m1 = new Array(1, 2, 3);
+// var m2 = [];
+// m2 = m.concat(4, 5);
+// console.log(m1 + " " + m2);
+
+// join объединяет  элементы массива в строку, разделяя их заданным разделителем
+// var massiv = new Array(5, 6, 7);
+// console.log(massiv.join(" "));
+
+// shift - возвращает  первый элемент массива и удаляет его из массива
+
+//pop - выталкивает последний элемент массива и удаляет его из массива
+
+//sort - для сортировки массива, по умолчанию(числа - по возрастанию, символы по алфавиту)
+
+// reverse - переворачивает массив, элементы в массиве в обратном порядке
+
+//slice(начало, конец) Возвращает срез массива от индекса начаал до индекса конца, если второй индекс не задан - то до конца
+// var m1 = new Array(1, 2, 3, 4, 5, 6);
+// var m2 = m1.slice(1, 3);
+// alert(m2);
+
+// toString преобразует массив в строку, элементы указываются через запятую
+
+// функция sort соритровка
+// function my_unique_sort(first, second) {
+//   var x = first.toLowerCase();
+//   var y = second.toLowerCase();
+//   if (x > y) return 1;
+//   if (x < y) return -1;
+//   return 0;
 // }
-// const p1 = new Human(1983, "Den");
-// console.log(Human.displayName);
+// var mass = [" One", "two9", "open"];
+// mass.sort(my_unique_sort);
+// console.log(mass.join(", "));
 
-// class Human {
-//   scream() {
-//     return this;
-//   }
-//   static listen() {
-//     return this;
-//   }
-// }
-// let obj = new Human();
-// obj.scream();
-// let scream = obj.scream;
-// scream();
-// Human.listen();
-// let listen = Human.listen;
-// listen();
+//Многомерные массивы можно создавать поэлементно
+// var m = [];
+// m[0] = [];
+// m[1] = [];
+// m[0][0] = 1;
+// m[0][1] = 2;
+// m[0][2] = 3;
+// m[1][0] = 1;
+// m[1][1] = 2;
+// m[1][2] = 3;
 
-// Свойства экземпляра должны быть определены в конструкторе
-// class Box {
-//   constructor(height, width) {
-//     this.height = height;
-//     this.width = width;
-//   }
-// }
+// Или использовать перечисление
+// var m = new Array(new Array("1", "2", "3"), new Array("3", "2", "1"));
+// alert(m);
 
-// class Human {
-//   constructor(name) {
-//     this.name = name;
-//   }
-//   speak() {
-//     console.log(`${this.name} говорит.`);
-//   }
-// }
-// class vasya extends Human {
-//   constructor(name) {
-//     super(name);
-//   }
-//   speak() {
-//     console.log(`${this.name} говорит.`);
-//   }
-// }
-// let v = new vasya("Василий");
-// v.speak();
-
-// Создать новый объект можно с помощью функции-конструктора Object
-// var Human = new Object();
-// Human.firstname = "John";
-// Human.lastname = "Doe";
-// Human.getFullName = function () {
-//   var fname = this.firstname + this.lastname;
-//   return fname;
-// };
-// window.alert(Human.firstname);
-// window.alert(Human.lastname);
-// window.alert(Human.getFullName());
-
-//Другой мспособ создания объекта- с использованием фигурных скобок
-// var Human = {
-//   firstname: "John",
-//   lastname: "Doe",
-//   getFullName: function () {
-//     var fname = this.firstname + this.lastname;
-//     return fname;
-//   }
+//Ассоциативный массив
+// var m = new Array();
+// m["one"] = 1;
+// m["two"] = 2;
+// for (let n in m) {
+//   console.log(n + " = " + m[n]);
 // }
 
-//Создаем пустой объект
-// var empty_obj = {};
+// Есть 4 баннера, выводим их рандомно, баннеры с названием banner0.jpg
+// var nu = Math.floor(Math.random() * 5.9999);
+// document.write('<img src="banner' + nu + '.jpg">');
 
-//Пример - создаем 1 объект и 2 ссылки на него
-// var ob1 = ob2 = {};
-
-//Создаем два одинаковых объекта, которые будут использоваться раздельно
-// var o1 = {};
-// var o2 = {};
-
-//Функции конструкторы удобно использовать, если нужно инициализировать несколько подобных объектов
-// function Human(firstname, lastname) {
-//   this.firstname = firstname;
-//   this.lastname = lastname;
-//   this.getFullName = function () {
-//     var fname = this.firstname + this.lastname;
-//     return fname;
-//   };
+// function sumArgs() {
+//   var r = 0;
+//   for (var i = 0; i < arguments.length; i++) r = r + arguments[i];
+//   return r;
 // }
-// var John = new Human("John", "Doe");
-// var Ivan = new Human("Ivan", "Ivanov");
+// console.log(sumArgs(1, 2, 3));
 
-//Цикл for in позволяет пройтись по всем свойствам объекта
-// for (var P in John) {
-//   document.write(P + " = " + John[P]);
+// function getStrMonth(m) {
+//   var d = new Date();
+//   var monthArray = [
+//     "Янв",
+//     "Фев",
+//     "Мар",
+//     "Апр",
+//     "Май",
+//     "Июн",
+//     "Июл",
+//     "Авг",
+//     "Сен",
+//     "Окт",
+//     "Ноя",
+//     "Дек",
+//   ];
+//   var currentMonth = d.getMonth();
+//   if (m < 0 || m > 11) return monthArray[currentMonth];
+//   return monthArray[m];
 // }
+// var d = new Date();
+// console.log(getStrMonth(d.getMonth()));
 
-// Оператор in позволяет проверить существования свойства в объекте
-// if ("firstname" in John) window.alert(John.firstname);
+// let reg = RegExp("abc[de]");
+// let Str = "abc, abcd, abce, abcf";
+// console.log(Str.search(reg));
 
-// проверить наличие метода можно указав его имя без скобок
-// if (John.getFullName) window.alert("getFullName exists");
-
-// Оператор instanceof позволяет проверить принадлежность экземпляра классу
-// if (typeof John == "object" && John instanceof Human)
-//   window.alert("John - экземпляр Human");
-
-// удаление свойства
-// delete Ivan.lastname;
-
-// Пример прототипа
-// function Human(firstname, lastname) {
-//   this.firstname = firstname;
-//   this.lastname = lastname;
-// }
-// Human.prototype.getFullName = function () {
-//   var fname = this.firstname + this.lastname;
-//   return fname;
-// };
-// var John = new Human("john", "Doe");
-// document.write(John.getFullName());
-// var Ivan = new Human("Ivan", "Ivanov");
-// document.write(Ivan.getFullName());
-
-//Функция определена внутри пространства имен
-// var MyLibrary = {};
-// MyLibrary.DecodeString = function () {
-//   document.write("Test");
-// };
-// MyLibrary.DecodeString();
-
-// Доступ по ссылке для удобства к пространству имен
-/*1)создаем пространство имен
-2)создаем ссылку на пространство имен
-3)используем ссылку $(чтобы не переписывать весь код , когда вам нужно реализвоать подобные функции на разных сайтах) */
-// var nitcenter = {};
-// var $ = nitcenter;
-// $.DecodeString();
+// let reg = new RegExp("abc[de]", "g");
+// let Str = "abc, abcd, abce, abcf";
+// let m = [];
+// m = Str.match(reg);
+// for (var i = 0, c = m.length; i < c; i++) console.log(m[i] + " ");
+// let s = Str.replace(reg, "match");
+// console.log(s);
