@@ -4,64 +4,153 @@
 
 # Конспект
 
-События происходят при взаимодействии пользователя со страницей. С помощью событий система извещает сценарий, что пользователь выполнил какое-то действие.
+родительский объект.дочерний объект.свойство
+родительский объект.дочерний объект.метод
 
-События мыши:
-onmousedown(нажатие кнопки мыши на эелементе "без отпускания"),
-onmouseup(при отпускании ранее нажатой кнопки мыши),
-onclick(целчек мыши - нажатие и отпускание),
-ondblclick(двойной клик по элементу),
-onmouseover(при наведении курсором на элемент),
-onmouseout(курсор мыши уходит за пределы элемента),
-onmousemove(При перемещении мыши),
-onselect(При выделении элемента),
-onselectstart(При начале выделения),
-oncontextmenu(Когда пользователь нажимает "правую кнопку").
+родительский объект можно опускать и дочерний, например window - это родительский, при вызове alert, можем опустить.
 
-События клавиатуры:
-onkeydown(Возникает при нажатии клавиши на клавиатуре),
-onkeypress(При нажатии клавиши на клавиатуре - возвращает код нажатого символа в Unicode),
-onkeyup(Пользователь отпускает нажатую ранее клавишу),
-onhelp(При нажатии клавиши f1).
+Объекты объектной модели: event,
+history,
+navigator,
+location,
+screen,
+document(дочерние классы: all,
+anchors,
+elements,
+forms,
+images,
+links,
+scripts,
+styleSheets
+)
 
-События документа:
-onload(генерируется сразу после загрузки веб-страницы),
-onscroll(возникает при прокручивании содержимого страницы),
-onresize(При изменении размеров окна),
-onunload(генерируется при выгрузке документа после события onbeforeunload),
-onbeforeunload(Перед выгрузкой документа, перед событием onunload),
-onbeforeprint(Перед распечаткой документа),
-onafterprint(После распечатки документа)
+Объект window - представляет сам браузер. Основные свойства:
+defaultStatus, status, parent, self, top, opener, closed, screenLeft, screenTop, clientInformation. Основные события:
+onload, onunload, onscroll, onresize, onblur, onfocus. Основные методы: alert(),confirm(),prompt(), showModalDialog(), open(), close(),blur(),focus(),navigate(URL),stop(),resizeBy(x,y),resizeTo(width,height), moveBy(x,y),scrollBy(x,y),scrollTo(x,y),setTimeout()
 
-События формы:
-onsubmit(При отправке формы - при нажатии кнопки Submit),
-onreset(При сбросе формы - при нажатии кнопки Reset),
-onblur(При потере фокуса элементом формы),
-onfocus(Когда элемент формы получает фокус),
-onchange(Когда фокус перемещается на другой элемент кнопки - перед onblur).
+Метод open():
+var окно = window.open(URL,имя окна,свойства);
+Свойства: left, top, width, height,fullscreen, resizable, location, menubar, scrollbars, status, titlebar, toolbar.
 
-Существует последовательность событий, которую необходимо учитывать.
+Другие методы объекта window касающиеся таймеров:
+clearTimeOut(таймер), setInterval(), clearInterval(интервал),
 
-Всплывание событий - событие последовательно передается родительскому элементу. Есть возможность прерывания событий. Для этого есть свойство cancelBubble объекта evel в значении true.
-В некоторых браузерах для прерывания событий используется метод stoPropogation(). Рекомендуется использовать 2 способа сразу для большей своместимости.
+Объект navigator - для получения информации о браузере. Свойства объекта navigator содержит много информации:
+appName,
+appCodeName,
+appVersion,
+appMinorVersion,
+userAgent,
+cpuClass,
+platform,
+systemLanguage,
+browserLanguage,
+userLanguage,
+onLine,
+cookieEnabled
 
-Можно отменить действие по умолчанию.
+Объект screen - информация о мониторе пользователя. Свойства:
+width,
+height,
+availWidth,
+availHeight,
+colorDepth.
 
-Обработчик события нужно выводить в функцию, т.к. ограничение для атрибута в тэге 1024 символа.
+Объект location - строка адреса пользоватлеьского агента - представляет информацию о url адресе текущей странице. Свойства:
+href,
+protocol,
+port,
+host,
+hostname,
+pathname,
+search,
+hash.
+Методы location:
+assign(),
+reload(),
+replace().
 
-Объект event
-Свойства объекта Event:
-srcElement(ссылка на элемент-источник события),
-currentTarget(ссылка на элемент в котором обрабатывается событие.),
-type(Позволяет узнать тип события),
-clientX, clientY (Координаты X Y события),
-screenX, screenY(Координаты X Y события относительно окна),
-offsetX, offsetY(Координаты X Y события относительно контейнера),
-button(число, показывающая какая кнопка мыши была нажата 0 - левая 1 - средняя 2 правая),
-keyCode(Код нажатой на клавиатуре клавиши),
-altKey(если свойство равно true то нажата клавиша alt вместе с другой клавишей),
-ctrlKey(если свойство равно true, то была нажата клавиша ctrl),
-shiftKey(Если true, то была нажата Shift),
-cancelBuble(запрещает всплывание событий),
-return Value(определяет будет ли выполняться действие по умолчанию),
-relatedTarget(Ссылка на элемент с которого перешел курсор мыши)
+Объект history - доступ к истории браузера, то есть к списку ранее просмотренных веб страниц. Свойство length - содержит размер списка истории. Методы:
+go(номер),
+back(),
+forward().
+
+Объект document предоставляет доступ к элементам документа. Свойства:
+activeElement,
+documentElement,
+body,
+title,
+URL,
+referrer,
+parentWindow,
+cookie,
+readyState,
+location,
+selection,
+fileCreatedDate,
+fileModifiedDate,
+fileUpdatedDate,
+lastModified,
+filesize,
+bgColor,
+fgColor,
+linkColor,
+alinkColor,
+vlinkColor.
+Методы document:
+write(текст),
+writeln(текст),
+getElementById(id элемента),
+getElementByName(название элемента),
+elementFromPoint(x,y).
+Основные свойства элементов:
+all,
+id,
+className,
+sourceIndex,
+tagName,
+parentElement,
+length,
+height и width,
+clientHeight и clientWidth,
+clientLeft,
+clientTop,
+offsetHeight и offsetWidth,
+offsetLeft,
+offsetParent,
+innerText,
+outerText,
+innerHTML,
+outerHTML,
+scrollHeight и scrollWidth,
+scrollLeft и scrollTop.
+Методы общие для всех элементов:
+getAdjiancentText,
+insertAdjancentHtml,
+getAttribute,
+setAttribute,
+removeAttribute,
+clearAttributes(),
+contains(имя).
+
+Объект style: доступ к таблице стилей -
+color = color,
+font-size = fontSize,
+
+Объект selection: выделение текста:
+Если выбран текст то свойство type объекта selection содержит значение Text, если ничего, то None.
+Методы: clear(), empty().
+
+Проверим поддерживает ли браузер Cookies клиента
+if(navigator.cookieEnabled){
+// Можем работать с Cookies
+}
+
+Установить Cookies можно так:
+document.cookie = "Имя = значение; expires=Дата; domain = имя домена; path=Путь; secure"
+Дату указывать в формате:
+Mon, 01 Mar 2021 00:00:01 GMT
+По истечению этой даты Cookie будет удален. Получить дату в этом формате можно с помощью метода setTime() и метода toGMTString():
+let dt = new Date();
+dt.setTime(dt.getTime()+36000); Время жизни 10 часов
+let Exp_Date = d.toGMTString(); Конечная дата
