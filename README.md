@@ -4,64 +4,84 @@
 
 # Конспект
 
-Пример - в нашем документе есть форма form1 с текстовым полем firstname, обратиться к этому полю можно через коллекцию forms.
-document.forms['form1'].firstname.value
-Обращение напрямую
-document.form1.firstname.value
-Обращение к форме по индексу
-document.forms[0].firstname.value
-Для получения доступа к элементу используется метод getElementById() объекта document
-document.getElementById('username').value
-Доступ к элементам формы можно получить через коллекцию elements:
-document.forms["loginform"].elements["password"].value
-document.forms["loginform"].elements[0].value
-document.forms[0].elements[0].value
+В продакшн проекта необходимо загружать сжатую версию jquery - это влияет на оптимизацию и сео.
 
-Объект формы обладает следующими свойствами:
-action, length, elements, ecoding, method, enctype, name, target.
+Селектор + выбирает элемент, следующий непосредственно за указанным(известным элементом)
+Например: предыдущий + следующий.
+
+Селектор ~ позволяет найти все элементы, которые находятся на одном уровне с указанным элементом, то есть сестринские( не дочерние) элементы.
+
+Фильтры:
+:first,
+:last,
+:even,
+:odd,
+:eq(n),
+:gt(n),
+:lt(n),
+:not(фильтр),
+:header,
+:contains(строка),
+:empty,
+:checked,
+:selected,
+
 Методы:
-submit(),
-reset();
-События:
-onsubmit,
-onreset.
+attr(),
+removeAttr(),
+addClass(),
+removeClass(),
+toggleClass(),
+hasClass().
 
-<input type="text">
-<input type="password">
-Свойства:
-value,
-defaultValue,
-disabled,
-form,
-maxLength,
-name,
-readOnly,
-type.
-Методы:
-blur() - событие onblur;
-focus() - событие onfocus, onchange
-select() - - выделяет текст в поле.
+С помощью метода click() и анонимной функции - задаем обработчик события
+$("#button1").click(function () {
+$("div").addClass("cl1");
+});
 
-textaera - есть свойство wrap, позволяющее определить режим переноса слов.Свойства принимает следующие значения:
-off,
-physical,
-virtual.
+Методы html() - содержимое html кода и text() - содержимое текста
 
-Свойства флажков и переключателей:
-checked,
-value,
-defaultChecked,
-disabled,
-indeterminate,
-form,
-name,
-type.
-Из методов флажки и переключатели поддерживают: blue() и focus(). События: onblur(), onfocus(), onclick().
+Метод val() - работа с атрибутом value
 
-Работа с кнопками. Свойства:
-value,
-disabled,
-form,
-name,
-type
-Методы: blur(), focus(); События: onblur(), onclick(), onfocus().
+Методы hide(),show(),toggle(). (Скрытие/ показ элементов)
+
+Методы slideUP(), slideDown(), slideToggle(). (Плавное сокрытие/ отображение элемента)
+
+Методы fadeOut(), fadeIn(), fadeToggle(). (Отображают/скрывают элемент с эффектом затухания)
+
+Метод fadeTo() - плавное изменение прозрачности
+
+Метод animate() - простейшая анимация
+
+Метод css() - позволяет получить и установить значение css свойства
+
+Метод append() - добавляет после, prepend() добавляет перед (можно какой-либо текст)
+
+Методы appendTo() и prependTo() перемещают выбранный элемент до или после ссответственно
+
+Методы after() и before() - используют, когда нужно вставить некоторый HTML код после и до определенного элемента
+
+Методы wrapInner() и wrapAll() - для изменения разметки html.
+
+Еще методы:
+empty() - очищает элемент, удаляя все его содержимое. Сам элемент при этом остается на странице;
+remove() - удаляет элемент;
+clone() - клонирует элемент. Клонируются не только атрибуты(свойства) элемента, но также и связанные с ним обработчики событий.
+
+Методы обработки событий Jquery:
+blur(),
+change(),
+click(),
+contextmenu,
+error(),
+focus(), focusin(), focusout(),
+keypress(), keyup(),keydown(),
+mouseenter(),mouseleave(),mousemove(),mouseout(),mouseover(),mouseup().
+Так же меьтод on() - используется для установки обработчика одного или нескольких событий, прототип:
+on(events[selector][data]handler)
+
+Ajax: Метод load()
+POST
+GET
+getScript - подклчюение скриптов(загрузка и выполнение js файлов)
+JSON данные
