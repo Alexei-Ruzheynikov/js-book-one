@@ -1,311 +1,236 @@
-//Библиотека jquery, выбираем все элементы *
-// $(function () {
-//   alert($("*").length);
-
-//   alert($("*", document.body).length);
-// });
-
-// $(function () {
-//   $("#divInfo").css("border", "3px solid #00f");
-// });
-
-// $(function () {
-//   $("div").css("border", "3px solid green");
-//   $("div").css("margin", "20px");
-// });
-
-// $(".text").css("border", "1px solid #f00");
-
-// $(function () {
-//   $("div, p.text").css("border", "4px solid red");
-// });
-
-// $(function () {
-//   $("tr:first").css("background-color", "lightgray");
-//   $("tr:last").css("background-color", "red");
-//   $("tr:even").css("background-color", "green");
-//   $("tr:odd").css("background-color", "yellow");
-//   $("td:eq(2)").css("background-color", "yellow");
-//   $("td:gt(2)").css("background-color", "yellow");
-//   $("td:lt(2)").css("background-color", "yellow");
-//   $("td:not(:gt(3))").css("background-color", "yellow");
-//   $(":header").css("border", "3px solid #f00");
-//   $("div:contains('Hello')").css("text-decoration", "bold");
-//   $("p:contains('Hello')").css("text-decoration", "bold");
-//   $("td:empty").css("text-decoration", "bold");
-//   alert(
-//     "К-во видимых элементов..." +
-//       $(":visible", document.body).length +
-//       "\nК-во скрытых элементов... " +
-//       $(":hidden", document.body).length
-//   );
-//   $("input:disabled").val("disabled");
-//   $(":input").css("border", "3px solid red");
-//   $(":password").css("border", "3px solid red");
-//   function counter() {
-//     var n = $("input:checked").length;
-//     $("div").text("Выбрано - " + n);
-//   }
-//   counter();
-//   $(":checkbox").click(counter);
-// var target = $('a').attr('target');
-//   $("a").attr("href", "http://nit.center");
-//
-//   let href = $("a").attr("href");
-//   alert("Текущий адрес: " + href + "\nНовый адрес: http://nit.center");
-//   //   $("a").attr("href", "http://nit.center");
-//   //   $("a").attr("title", "Щелкни здесь");
-//   $("a").attr({
-//     href: "http://nit.center",
-//     title: "Жми!",
-//   });
-//   $("a").removeAttr("title");
-// });
-// $(function () {
-//   $("#button1").click(function () {
-//     $("div").addClass("cl1");
-//   });
-//   $("#button2").click(function () {
-//     $("div").removeClass("cl1");
-//   });
-//   $("#button3").click(function () {
-//     $("div").toggleClass("cl1");
-//   });
-//   $("#button4").click(function () {
-//     alert($("div").hasClass("cl1"));
-//   });
-// });
-
-// $(function () {
-//   var txt = $("#hello").text();
-//   //   var txt = $("#hello").html();
-//   $("#hello").html("<b>Привет!</b>");
-
-//   window.alert(txt);
-// });
-
-// $(function () {
-//   $("#button1").click(function () {
-//     let value = $("#inp1").val();
-//     console.log(value);
-//   });
-// });
-
-// $(function () {
-//   $("#button1").click(function () {
-//     var value = $("input:radio[name=pet]:checked").val();
-//     window.alert(value);
-//   });
-// });
-
-// $(function () {
-//   $("#show").click(function () {
-//     $("div").show();
-//   });
-//   $("#hide").click(function () {
-//     $("div").hide();
-//   });
-//   $("#toggle").click(function () {
-//     $("div").toggle();
-//   });
-// });
-
-// $(function () {
-//   $("#show").click(function () {
-//     $("#text").slideDown(1500);
-//   });
-//   $("#hide").click(function () {
-//     $("#text").slideUp(1500);
-//   });
-//   $("#toggle").click(function () {
-//     $("#text").slideToggle(1500);
-//   });
-// });
-
-// $(function () {
-//   $("#show").click(function () {
-//     $("#text").fadeIn(1500);
-//   });
-//   $("#hide").click(function () {
-//     $("#text").fadeOut(1500);
-//   });
-//   $("#toggle").click(function () {
-//     $("#text").fadeToggle(500);
-//   });
-// });
-
-// $(function () {
-//   $("button").one("click", function () {
-//     $("p:first").fadeTo("slow", 0.3, function () {
-//       console.log("Готово!");
-//     });
-//   });
-// });
-
-// $(function () {
-//   $("#right").click(function () {
-//     $(".block").animate({ left: "+=50px" }, "slow");
-//   });
-//   $("#left").click(function () {
-//     $(".block").animate({ left: "-=50px" }, "slow");
-//   });
-//   $("#down").click(function () {
-//     $(".block").animate({ top: "+=50px" }, "slow");
-//   });
-//   $("#up").click(function () {
-//     $(".block").animate({ top: "-=50px" }, "slow");
-//   });
-// });
-
-// $(function () {
-//   let old_width = $("div").css("width");
-//   window.alert(old_width);
-//   let new_width = "110px";
-//   $("div").css("width", new_width);
-//   window.alert(new_width);
-// });
-
-// $(function () {
-//   $("button").click(function () {
-//     let color = $("input").val();
-//     $("div").css("background-color", color);
-//   });
-// });
-
-// $(function () {
-//   $("button:eq(0)").click(function () {
-//     $("input").val($("div").width());
-//   });
-//   $("button:eq(1)").click(function () {
-//     $("input").val($("div").height());
-//   });
-//   $("button:eq(2)").click(function () {
-//     $("input").val($("div").innerWidth());
-//   });
-//   $("button:eq(3)").click(function () {
-//     $("input").val($("div").innerHeight());
-//   });
-//   $("button:eq(4)").click(function () {
-//     $("input").val($("div").outerWidth(true));
-//   });
-//   $("button:eq(5)").click(function () {
-//     $("input").val($("div").outerHeight());
-//   });
-//   $("button:eq(6)").click(function () {
-//     $("div").width($("input").val() * 1);
-//   });
-//   $("button:eq(7)").click(function () {
-//     $("div").height($("input").val() * 1);
-//   });
-// });
-
-// $(function () {
-//   $("p").append("<b> мир</b>");
-//   $("p").prepend("<b> мир</b>");
-// });
-
-// $(function () {
-//   $("button").click(function () {
-//     $("#bye").appendTo("#msg");
-//   });
-// });
-
-// $(function () {
-//   $(function () {
-//     $("p").before("<b>до текста</b>");
-//     $("p").after("<b>После текста</b>");
-//   });
-// });
-
-// wrapInner - обрамляет контент внутри, wrap - обрамляет тэг а, wrapAll - обрамляет все li в ol
-// $(function () {
-//   $("button").click(function () {
-//     $("a").wrapInner("<i></i>").wrap("<li></li>");
-//     $("li").wrapAll("<ol></ol>");
-//   });
-// });
-
-// Метод unwrap - отменяет действие метода wrap
-// $(function () {
-//   $("#b1").click(function () {
-//     $("a").wrapInner("<i></i>").wrap("<li></li>");
-//     $("li").wrapAll("<ol></ol>");
-//   });
-//   $("#b2").click(function () {
-//     $("a").unwrap();
-//   });
-// });
-
-// $(function () {
-//   $("p").replaceWith("<div>" + $("p").text() + "</div>");
-//   $("<div>").replaceAll("p");
-//
-//   $("p").click(function () {
-//     $(this).replaceWith("<div>" + $(this).text() + "</div>");
-//   });
-// });
-
-// $(function () {
-//   $("#target").contextmenu(function () {
-//     alert("Обработчик для .contexmenu() вызван..");
-//   });
-// });
-
-// Просто пример
-// $(function () {
-//   function notify() {
-//     alert("Привет!");
-//   }
-//   $("button").on("click", notify);
-// });
-
-// $(function () {
-//   $("button:first").click(function () {
-//     $("#target").load("https://nit.center/test.htm");
-//   });
-//   $("button:last").click(function () {
-//     $("#target").empty();
-//   });
-// });
-
-// Не сработал
-// $(function () {
-//     $("button:first").click(function () {
-//     $("#target").load("nit.html p:last", function(){
-//         alert('Готово!');
-//     });
-//     $("button:last").click(function () {
-//     $("#target").empty();
-//     });
-// });
-
-//
-// <?php
-// if($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest')
-// {
-//     if($_POST) {
-//         echo 'Login: ' . $_POST['login'] . ', password: ' . $_POST['password'];
-//     }
-// }
-// ?>
-// $.post(
-//   "post.php",
-//   {
-//     login: "mark",
-//     password: "123456",
-//   },
-//   function (data) {
-//     $("div").text(data);
-//   }
-// );
+//Меняем язык календаря на русский
+$(function () {
+  $.datepicker.setDefaults({
+    closeText: "Закрыть",
+    prevText: "",
+    currentText: "Сегодня",
+    monthNames: [
+      "Январь",
+      "Февраль",
+      "Март",
+      "Апрель",
+      "Май",
+      "Июнь",
+      "Июль",
+      "Август",
+      "Сентябрь",
+      "Октябрь",
+      "Ноябрь",
+      "Декабрь",
+    ],
+    monthNamesShort: [
+      "Янв",
+      "Фев",
+      "Мар",
+      "Апр",
+      "Май",
+      "Июн",
+      "Июл",
+      "Авг",
+      "Сен",
+      "Окт",
+      "Ноя",
+      "Дек",
+    ],
+    dayNames: [
+      "воскресенье",
+      "понедельник",
+      "вторник",
+      "среда",
+      "четверг",
+      "пятница",
+      "суббота",
+    ],
+    dayNamesShort: ["вск", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
+    dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+    weekHeader: "He",
+    dateFormat: "dd.mm.yy",
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: "",
+  });
+});
 
 $(function () {
-  $("button:eq(0)").click(function () {
-    $.getScript("script.js");
+  //Вызов виджета datapicker - календарь
+  $("#date").datepicker();
+});
+
+$(function () {
+  $("#dialog").dialog();
+});
+
+$(function () {
+  $("#accordion").accordion();
+});
+
+$(function () {
+  $("#bar").progressbar({
+    value: 0,
+    change: function (event, ui) {
+      console.log("Событие " + event.type);
+    },
+    complete: function (event, ui) {
+      console.log("Событие " + event.type);
+    },
   });
-  $("button:eq(1)").click(function () {
-    $.getScript("http://nit.center/ajax/test.js", function () {
-      alert("После");
+  $("button").click(function () {
+    let currentVal = $("#bar").progressbar("option", "value");
+    if (currentVal < 100) {
+      currentVal = currentVal + 10;
+      $("#percent").text(currentVal + "%");
+      $("#bar").progressbar("option", "value", currentVal);
+    }
+  });
+});
+
+$(function () {
+  $("#tabs").tabs();
+});
+
+$(function () {
+  var availableCars = ["auto", "aureg", "abcde", "alor"];
+  $("#cars").autocomplete({
+    source: availableCars,
+  });
+});
+
+$(function () {
+  $("#button1")
+    .button()
+    .click(function (e) {
+      console.log("Нажата кнопка 1");
     });
+  $("#button2")
+    .button()
+    .click(function (e) {
+      console.log("Нажата кнопка 2");
+    });
+});
+
+$(function () {
+  $("#menu").menu();
+});
+
+//не отрабатывает как горизонтальное меню.
+$(document).ready(function () {
+  $("#horMenu").menu({ position: { using: setSubMenu } });
+  $("#horMenu > li > a > span.ui-icon-carat-d-e")
+    .removeClass("ui-icon-carat-l-e")
+    .addClass("ui-icon-carat-l-s");
+  function setSubMenu(position, elements) {
+    var options = {
+      of: elements.target.element,
+    };
+    if (elements.element.element.parent().parent().attr("id") === "horMenu") {
+      options.my = "center top";
+      options.at = "center bottom";
+    } else {
+      options.my = "left top";
+      options.at = "right top";
+    }
+    elements.element.element.position(options);
+  }
+});
+
+$(function () {
+  $(document).tooltip();
+});
+
+$(function () {
+  $("#slider").slider({
+    range: true,
+    values: [0, 100],
+  });
+});
+$(function () {
+  $("#slider2").slider({
+    range: "max",
+    value: 100,
+  });
+
+  $(function () {
+    $("#slider3").slider({
+      range: "min",
+      value: 1,
+      min: 0.5,
+      max: 2.5,
+      step: 0.1,
+      slide: function (event, ui) {
+        $("#message").css("font-size", ui.value + "em");
+      },
+    });
+  });
+});
+
+// $(function () {
+//   $("div#a1").effect({
+//     effect: "shake",
+//     times: 10,
+//     distance: 100,
+//     duration: 5000,
+//     complete: function () {
+//       $(this).css("background", "green");
+//     },
+//   });
+//
+//   $("div#a1").effect("blind");
+//   $("div#a1").effect("bounce");
+//   $("div#a1").effect("clip");
+//   $("div#a1").effect("drop");
+//   $("div#a1").effect("explode");
+//   $("div#a1").effect("fade");
+//   $("div#a1").effect("fold");
+//   $("div#a1").effect("highlight");
+//   $("div#a1").effect("puff");
+//   $("div#a1").effect("pulsate");
+//   $("div#a1").effect("scale");
+// $("div#a1").effect("size");
+//   $("div#a1").effect("slide");
+//   $("div#a1").effect("transfer");
+// });
+
+// $(document).ready(function () {
+//   $("#but1").click(function () {
+//     $("#mycontainer").hide($("#effect1").val(), {}, 1000);
+//   });
+//   $("#but2").click(function () {
+//     $("#mycontainer").show($("#effect1").val(), {}, 1000);
+//   });
+// });
+
+$(document).ready(function () {
+  $("#effect1").change(function () {
+    if ($("#effect1").val() === "scale") {
+      $("#scalecont").css("display", "block");
+      $("#transfercont").css("display", "none");
+      $("#sizecont").css("display", "none");
+    } else if ($("#effect1").val() === "transfer") {
+      $("#transfercont").css("display", "block");
+      $("#scalecont").css("display", "none");
+      $("#sizecont").css("display", "none");
+    } else if ($("#effect1").val() === "size") {
+      $("#sizecont").css("display", "block");
+      $("#transfercont").css("display", "none");
+      $("#scalecont").css("display", "none");
+    }
+  });
+  //
+  $("#but1").click(function () {
+    var options = {};
+    if ($("effect1").val() === "scale") {
+      var options = { percent: 50 };
+      options.percent = $("#scalepercent").val();
+    } else if ($("#effect1").val() === "transfer") {
+      var options = { to: "#but1", className: "transfer-effect" };
+      options.to = $("#trans1").val();
+      options.className = $("#trans2").val();
+    } else if ($("#effect1").val() === "size") {
+      var options = { to: { width: 200, height: 200 } };
+      options.to.width = $("#size1").val();
+      options.to.height = $("#size2").val();
+    }
+    $("#mycontainer").effect($("#effect1").val(), options, 1000);
   });
 });

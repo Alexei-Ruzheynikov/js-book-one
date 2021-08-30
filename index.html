@@ -5,255 +5,305 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Заголовок</title>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css"
+    />
     <style type="text/css">
-      /* div {
-        border: 2px solid #f00;
-      }
-      .cl1 {
-        background-color: green;
-        color: white;
+      /* .p {
+        color: red;
+        background-color: #fdd;
       } */
-      /* div {
-        border: 1px dotted #369;
-        padding: 5px;
-        color: blue;
-      } */
-      /* div {
-        position: absolute;
-        background-color: #000;
-        left: 70px;
-        top: 70px;
-        width: 200px;
-        height: 200px;
-        margin: 10px;
-      } */
-      /* div {
+      .ui-menu {
         width: 150px;
-        height: 150px;
-        margin: 10px;
-        float: left;
-      } */
-      /* div {
-        width: 250px;
-        height: 150px;
-        margin: 10px;
-        float: left;
-        border: 1px solid #379;
-      } */
-      /* p {
-        border: 1px solid green;
-        color: #169;
+        font-size: 14px;
+        min-height: 22px;
       }
-      div {
-        border: 2px solid red;
-        color: #02f;
-      } */
-
-      div {
-        width: 700px;
-        height: 600px;
+      ui#horMenu {
+        width: 900px;
+      }
+      ui#horMenu > li {
+        width: 150px;
+        float: left;
+      }
+      label {
+        display: inline-block;
+        width: 5em;
+      }
+      div#a1 {
+        background: red;
+        height: 110px;
+        width: 110px;
+      }
+      /* #mycontainer {
         padding: 10px;
-        margin: 10px;
-        border: 3px double #379;
-        overflow: auto;
+        width: 550px;
+        height: 150px;
+        border: 1px solid lightgrey;
+      }
+      #mycontainer h2 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-align: center;
+        padding: 5px;
+      }
+      #mycontainer p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      #scalecont {
+        font-size: 0.8em;
+      }
+      #transfercont {
+        display: none;
+        font-size: 0.8em;
+      }
+      #sizecont {
+        display: none;
+        font-size: 0.8em;
+      }
+      .transfer-effect {
+        border: 2px solid grey;
+      } */
+      #mycontainer {
+        padding: 1em;
+        padding: 10px;
+        width: 550px;
+        height: 150px;
+        border: 1px solid lightgrey;
+        overflow: hidden;
+      }
+      #mycontainer h2 {
+        margin-top: 0;
+        margin-bottom: 13px;
+        /* text-align: center; */
+        padding: 5px;
+      }
+      #mycontainer p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      #scalecont {
+        font-size: 0.8em;
+      }
+      #transfercont {
+        display: none;
+        font-size: 0.8em;
+      }
+      #sizecont {
+        display: none;
+        font-size: 0.8em;
+      }
+      .transfer-effect {
+        border: 2px solid grey;
       }
     </style>
   </head>
   <body>
-    <!-- <div id="divInfo">Делаем синюю рамку вокруг текста</div> -->
-
-    <!-- <div id="myDiv">Блок 1</div>
-    <div id="someDiv">Блок 2</div> -->
-
-    <!-- <div class="text">Текст</div> -->
-
-    <!-- <div id="myDiv">Блок 1</div>
-    <div id="someDiv">Блок 2</div>
-    <p class="text">Текст</p>
-    <ul class="text">
-      <li>Элемент 1</li>
-    </ul> -->
-
-    <!-- <h1>Привет</h1>
-    <table style="width: 100%">
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td>10</td>
-        <td>11</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>14</td>
-        <td>15</td>
-        <td>16</td>
-      </tr>
-    </table> -->
-
-    <!-- <a href="http:/mail.ru" target="_blank">пример изменения ссылки</a> -->
-    <!-- 
-    <div>Div 1</div>
-    <div>Div 2</div>
-    <div>Div 3</div>
-    <button id="button1">Добавить класс</button>
-    <button id="button2">Удалить класс</button>
-    <button id="button3">Переключить класс</button>
-    <button id="button4">Проверить класс</button> -->
-
-    <!-- <div id="hello">Привет <b>мир</b>!</div> -->
-
-    <!-- <input type="text" id="inp1" value="Ваше имя" />
-    <button id="button1">Получить значение!</button> -->
-
-    <!-- <p>Есть ли у вас животное:</p>
-    <input type="radio" name="pet" value="cat" checked="checked" />Кошка
-    <input type="radio" name="pet" value="dog" />Собака
-    <input type="radio" name="pet" value="other" />Другое
-    <button id="button1">Результат!</button> -->
-
-    <!-- <button id="show">Показать</button>
-    <button id="hide">Скрыть</button>
-    <button id="toggle">Переключить</button>
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, dolorem!
-      Accusantium, suscipit aspernatur. Neque facilis dignissimos similique
-      sequi, nulla saepe fugit officia aspernatur voluptatum quo, deserunt
-      iusto. Recusandae iure ullam facere voluptas maiores quibusdam repellendus
-      explicabo cum itaque delectus, deserunt porro tempora, nisi perferendis
-      officia unde magni quam! Enim ipsum fugiat laboriosam culpa excepturi
-      ratione possimus soluta eum hic quisquam officiis velit illum, repudiandae
-      quod in. Tenetur exercitationem consequatur suscipit dolores, quae hic
-      obcaecati illum, possimus dignissimos explicabo distinctio amet facere
-      laborum necessitatibus nemo ea molestias laboriosam. Voluptatum pariatur
-      alias dolor necessitatibus voluptas neque quaerat modi, fuga odio magnam
-      voluptates.
-    </div> -->
-
-    <!-- <button id="show">Показать</button>
-    <button id="hide">Скрыть</button>
-    <button id="toggle">Переключить</button>
-    <div id="text">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, dolorem!
-        Accusantium, suscipit aspernatur. Neque facilis dignissimos similique
-        sequi, nulla saepe fugit officia aspernatur voluptatum quo, deserunt
-        iusto. Recusandae iure ullam facere voluptas maiores quibusdam
-        repellendus explicabo cum itaque delectus, deserunt porro tempora, nisi
-        perferendis officia unde magni quam! Enim ipsum fugiat laboriosam culpa
-        excepturi ratione possimus soluta eum hic quisquam officiis velit illum,
-        repudiandae quod in. Tenetur exercitationem consequatur suscipit
-        dolores, quae hic obcaecati illum, possimus dignissimos explicabo
-        distinctio amet facere laborum necessitatibus nemo ea molestias
-        laboriosam. Voluptatum pariatur alias dolor necessitatibus voluptas
-        neque quaerat modi, fuga odio magnam voluptates.
-      </p>
-    </div> -->
-
-    <!-- <button>Нажми на меня</button>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
-      dolorum quae reiciendis distinctio molestias tempore consectetur ipsum,
-      aspernatur molestiae dignissimos reprehenderit numquam, corrupti fuga modi
-      placeat magni, eos vel. Sit quisquam ut commodi numquam, magnam veniam
-      quidem quos error pariatur quasi voluptatibus ab dignissimos harum sed
-      nulla aliquid esse quaerat ea odit iste aut distinctio eligendi recusandae
-      earum. Reiciendis, repudiandae vel? Itaque, blanditiis eligendi pariatur
-      laudantium officia officiis corrupti temporibus veritatis sed ratione
-      tempora libero nobis. Debitis omnis enim ipsum eius, incidunt rerum et
-      fugit quae laborum numquam error? Iure molestias sit aliquam ipsum
-      deleniti voluptas, voluptates accusantium error cupiditate?
-    </p> -->
+      Дата:
+      <input type="text" id="date" />
+    </p>
 
-    <!-- <button id="left">Влево</button>
-    <button id="right">Вправо</button>
-    <button id="up">Вверх</button>
-    <button id="down">Вниз</button>
-    <div class="block"></div> -->
+    <div id="dialog" title="Привет!">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+        possimus nihil nobis quibusdam similique rem. Veritatis cupiditate
+        maxime nulla exercitationem.
+      </p>
+    </div>
 
-    <!-- <div>Привет всем</div> -->
+    <div id="accordion">
+      <h3><a href="#">Секция 1</a></h3>
+      <div>
+        <p>
+          1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+          architecto debitis itaque fugiat!
+        </p>
+      </div>
+      <h3><a href="#">Секция 2</a></h3>
+      <div>
+        <p>
+          2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+          architecto debitis itaque fugiat!
+        </p>
+      </div>
+      <h3><a href="#">Секция 3</a></h3>
+      <div>
+        <p class="p">
+          3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+          architecto debitis itaque fugiat!
+        </p>
+      </div>
+    </div>
 
-    <!-- <input type="text" value="#222" />
-    <button>Применить</button>
-    <div></div>
-    <div></div> -->
+    <div id="bar"></div>
+    <button>Добавить 10</button>
+    <div id="percent"></div>
 
-    <!-- <button>Получить width</button>
-    <button>Получить height</button>
-    <button>Получить innerWidth</button>
-    <button>Получить innerHeight</button>
-    <button>Получить outerWidth</button>
-    <button>Получить outerHeight</button>
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">Описание товара</a></li>
+        <li><a href="#tabs-2">Фото</a></li>
+        <li><a href="#tabs-3">Комментарии</a></li>
+      </ul>
+      <div id="tabs-1">
+        <p>
+          1Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
+          accusamus rerum recusandae.
+        </p>
+      </div>
+      <div id="tabs-2">
+        <p>
+          2Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
+          accusamus rerum recusandae.
+        </p>
+      </div>
+      <div id="tabs-3">
+        <p>
+          3Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
+          accusamus rerum recusandae.
+        </p>
+      </div>
+    </div>
+
+    <div class="ui-aidget">
+      <label for="cars">Марка авто:</label>
+      <input type="text" id="cars" />
+    </div>
+
+    <button id="button1">Кнопка 1</button>
+    <button id="button2">Кнопка 2</button>
+
+    <ul id="menu">
+      <li class="ui-state-disabled"><div>Toys (n/a)</div></li>
+      <li><div>Books</div></li>
+      <li><div>Clothing</div></li>
+      <li>
+        <div>Electronics</div>
+        <ul>
+          <li class="ui-state-disabled"><div>Home Enterainment</div></li>
+          <li class="ui-state-disabled"><div>Car Hifi</div></li>
+          <li class="ui-state-disabled"><div>Utilites</div></li>
+        </ul>
+      </li>
+      <li><div>Movies</div></li>
+      <li>
+        <div>Music</div>
+        <ul>
+          <li>
+            <div>Alternativw</div>
+          </li>
+          <li>
+            <div>Classic</div>
+          </li>
+        </ul>
+      </li>
+      <li><div>Jazz</div></li>
+      <ul>
+        <li>
+          <div>Freejazz</div>
+        </li>
+        <li>
+          <div>Big Band</div>
+        </li>
+        <li>
+          <div>Modern</div>
+        </li>
+      </ul>
+      <li><div>Pop</div></li>
+      <li class="ui-state-disabled"><div>Specials (n/a)</div></li>
+    </ul>
+
+    <ul id="horMenu">
+      <li><a href="#">Команда 1</a></li>
+      <li><a href="#">Команда 2</a></li>
+      <li>
+        <a href="#">Команда 3</a>
+        <ul>
+          <li><a href="#">Команда 3.1</a></li>
+          <li><a href="#">Команда 3.2</a></li>
+          <li><a href="#">Команда 3.3</a></li>
+          <li>
+            <a href="#">Команда 3.4</a>
+            <ul>
+              <li><a href="#">Команда 3.4.1</a></li>
+              <li><a href="#">Команда 3.4.2</a></li>
+              <li><a href="#">Команда 3.4.3</a></li>
+              <li><a href="#">Команда 3.4.4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Команда 3.5</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Команда 4</a></li>
+      <li><a href="#">Команда 5</a></li>
+    </ul>
+
+    <p>
+      <label for="age">Возраст:</label>
+      <input id="age" title="Данные не будут переданы третьей стороне" />
+    </p>
+
+    <div id="slider"></div>
+    <p></p>
+    <div id="slider2"></div>
+
+    Размер шрифта: <br />
+    <div id="slider3"></div>
+    Сообщение: <br />
+    <p><textarea id="message" cols="50" rows="10"></textarea></p>
+
+    <div id="a1"></div>
+
+    <div id="mycontainer" class="ui-widget ui-corner-all">
+      <h2 class="ui-widget-header ui-corner-all">Заголовок</h2>
+      <p>Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+    <br />
+    1. Выберите эффект: <br />
+    <select name="effect" id="effect1">
+      <option value="blind">Blind</option>
+      <option value="bounce">Bounce</option>
+      <option value="clip">Clip</option>
+      <option value="drop">Drop</option>
+      <option value="explode">Explode</option>
+      <option value="fade">Fade</option>
+      <option value="fold">Fold</option>
+      <option value="highlight">Highlight</option>
+      <option value="puff">Puff</option>
+      <option value="pulsate">Pulsate</option>
+      <option value="shake">Shake</option>
+      <option value="slide">Slide</option>
+      <option value="scale">Масштаб</option>
+      <option value="size">Размер</option>
+      <option value="transfer">Трансфер</option>
+    </select>
     <br /><br />
-    <input type="text" />
-    <button>Установить width</button>
-    <button>Установить height</button>
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate unde
-      molestiae inventore, consequatur sunt esse velit aut dolores voluptatibus
-      dolore culpa laborum?
-    </div> -->
-
-    <!-- <p>Привет</p> -->
-
-    <!-- <div id="bye">Пока!</div>
-    <button>Вставить</button>
-    <div id="msg">Привет!</div> -->
-
-    <!-- <p>Текст</p> -->
-
-    <!-- <a href="http://www.discovery.com">Discovery</a>
-    <a href="http://nit.center">Nit.Center</a>
-    <a href="http://booking.com">Booking</a>
-    <a href="http://www.trpadvisor.com">Tripadvisor</a>
-    <a href="http://livejournal.com">LiveJournal</a>
-    <button>Нажми на меня</button> -->
-
-    <!-- <a href="http://www.discovery.com">Discovery</a>
-    <a href="http://nit.center">Nit.Center</a>
-    <a href="http://booking.com">Booking</a>
-    <a href="http://www.trpadvisor.com">Tripadvisor</a>
-    <a href="http://livejournal.com">LiveJournal</a>
-    <button id="b1">Метод Wrap</button>
-    <button id="b2">Метод Unwrap</button> -->
-
-    <!-- <p>1</p>
-    <p>2</p>
-    <p>3</p> -->
-
-    <!-- <p>Первый параграф</p>
-    <p>Второй параграф</p>
-    <div>Div</div> -->
-
-    <!-- <div id="target">Правый клик</div> -->
-
-    <!-- <div id="target"></div>
-    <button>Загрузить</button>
-    <button>очистить</button> -->
-
-    <!-- Не сработал -->
-    <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, cum!</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, cum!</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, cum!</p>
-    <button>Загрузить</button>
-    <button>очистить</button> -->
-
-    <div></div>
-    <button>Запустить локальный скрипт</button>
-    <button>Запустить удаленный скрипт</button>
+    2. Дейсвие: <br /><br />
+    <input type="button" id="but1" value="Скрыть" />
+    <input type="button" id="but2" value="Показать" />
+    <br /><br />
+    3.Для scale,size,transfer. <br />
+    <div id="scalecont">
+      Процент для Scale:
+      <input type="text" id="scalepercent" value="50" />
+    </div>
+    <div id="transfercont">
+      k:
+      <input type="text" id="trans1" value="#but1" />
+      Класс:
+      <input type="text" id="trans2" value="transfer-effect" />
+    </div>
+    <div id="sizecont">
+      ширина:
+      <input type="text" id="size1" value="200" />
+      Высота:
+      <input type="text" id="size2" value="200" />
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

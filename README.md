@@ -4,84 +4,35 @@
 
 # Конспект
 
-В продакшн проекта необходимо загружать сжатую версию jquery - это влияет на оптимизацию и сео.
+jquery UI - (User Interface) - содержит плагины, которые будут полезны для разработки интерфейса пользователя веб-приложения. jquery UI поддерживаются jquery Foundation. Другими словами это официальная и одобреннаая к использованию библиотека. Демо страница библиотеки jqueryui.com/demos
 
-Селектор + выбирает элемент, следующий непосредственно за указанным(известным элементом)
-Например: предыдущий + следующий.
+Виджеты: аккордион - отображает контент на нескольких панелях для экономии пространства на странице;
+автокомплит - поле автодополнения, как Google;
+Кнопка;
+Checkboxradio - чекбоксы и радиобоксы;
+Controlgroup;
+DatePicker;
+dialog,
+menu,
+progressbar,
+selectmenu,
+slider,
+spinner,
+tabs,
+tooltip.
 
-Селектор ~ позволяет найти все элементы, которые находятся на одном уровне с указанным элементом, то есть сестринские( не дочерние) элементы.
+JQuery UI - https://github.com/jquery/jquery-ui
+Документация - http://api.jqueryui.com
+Другие темы оформление, если не прибегать к css http://jqueryui.com/themeroller/
+Документация эффектов https://api.jqueryui.com/название-effect
+Доп информация об эффектах https://api.jqueryui.com/category/effects
 
-Фильтры:
-:first,
-:last,
-:even,
-:odd,
-:eq(n),
-:gt(n),
-:lt(n),
-:not(фильтр),
-:header,
-:contains(строка),
-:empty,
-:checked,
-:selected,
-
-Методы:
-attr(),
-removeAttr(),
-addClass(),
-removeClass(),
-toggleClass(),
-hasClass().
-
-С помощью метода click() и анонимной функции - задаем обработчик события
-$("#button1").click(function () {
-$("div").addClass("cl1");
-});
-
-Методы html() - содержимое html кода и text() - содержимое текста
-
-Метод val() - работа с атрибутом value
-
-Методы hide(),show(),toggle(). (Скрытие/ показ элементов)
-
-Методы slideUP(), slideDown(), slideToggle(). (Плавное сокрытие/ отображение элемента)
-
-Методы fadeOut(), fadeIn(), fadeToggle(). (Отображают/скрывают элемент с эффектом затухания)
-
-Метод fadeTo() - плавное изменение прозрачности
-
-Метод animate() - простейшая анимация
-
-Метод css() - позволяет получить и установить значение css свойства
-
-Метод append() - добавляет после, prepend() добавляет перед (можно какой-либо текст)
-
-Методы appendTo() и prependTo() перемещают выбранный элемент до или после ссответственно
-
-Методы after() и before() - используют, когда нужно вставить некоторый HTML код после и до определенного элемента
-
-Методы wrapInner() и wrapAll() - для изменения разметки html.
-
-Еще методы:
-empty() - очищает элемент, удаляя все его содержимое. Сам элемент при этом остается на странице;
-remove() - удаляет элемент;
-clone() - клонирует элемент. Клонируются не только атрибуты(свойства) элемента, но также и связанные с ним обработчики событий.
-
-Методы обработки событий Jquery:
-blur(),
-change(),
-click(),
-contextmenu,
-error(),
-focus(), focusin(), focusout(),
-keypress(), keyup(),keydown(),
-mouseenter(),mouseleave(),mousemove(),mouseout(),mouseover(),mouseup().
-Так же меьтод on() - используется для установки обработчика одного или нескольких событий, прототип:
-on(events[selector][data]handler)
-
-Ajax: Метод load()
-POST
-GET
-getScript - подклчюение скриптов(загрузка и выполнение js файлов)
-JSON данные
+Свойства CSS анимации Jquery UI:
+backgroundColor,
+borderColor,
+borderBottomColor,
+borderLeftColor,
+borderRightColor,
+borderTopColor,
+color,
+outlineColor.
